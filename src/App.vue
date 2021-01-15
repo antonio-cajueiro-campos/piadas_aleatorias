@@ -32,13 +32,10 @@ export default {
   },
   methods: {
 
-    // método para obter o json da api
+    // método para obter o json da api através
     async getJson() {
       const url = `https://icanhazdadjoke.com/slack`;
-      this.json = await fetch(url).then(async(response) => {
-        const data = await response.json();
-        return data;
-      });
+      this.json = await fetch(url).then(response => response.json());
     },
   
     // método para mostrar a piada
