@@ -10,14 +10,16 @@
         <button v-if="piada == ''" class="btn btn-primary input-group-btn initBtn">Clique em mim para rir!</button>
         <div v-if="piada">
           <div class="line"></div>
-          {{ piada }}
+          <div class="joke">
+            {{ piada }}
+          </div>
           <div class="line"></div>
           <input type="submit" class="btn btn-primary input-group-btn nextJk" value="Próxima piada!">
         </div>
       </form>
     </div>
     <footer>
-      <p>Antonio Carlos - <a href="https://github.com/antonio-cajueiro-campos">GitHub</a></p>
+      <p>Antonio Carlos - <a href="https://github.com/antonio-cajueiro-campos">GitHub</a> | Powered By <a target="_blank" href="https://icanhazdadjoke.com">icanhazdadjoke.com</a></p>
     </footer>
   </div>
 </template>
@@ -69,6 +71,9 @@ export default {
 </script>
 
 <style>
+.joke {
+  font-size: 20px;
+}
 .line {
   height: 0px;
   width: 100%;
@@ -86,7 +91,7 @@ header {
 }
 .initBtn, .nextJk {
   position: absolute;
-  top: 200px;
+  top: 300px;
   left: 50%;
   transform: translate(-50%);
 }
